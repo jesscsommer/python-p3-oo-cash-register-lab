@@ -12,12 +12,10 @@ class CashRegister:
     }
   
   def add_item(self, title, price, quantity = 1):
-    i = 0
     self.last_transaction['items'] = []
-    for i in range(quantity):
+    for _ in range(quantity):
       self.items.append(title)
       self.last_transaction.get('items').append('title')
-      i +=1 
     self.last_transaction['subtotal'] = price * quantity
     self.total += (price * quantity)
     
